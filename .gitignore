@@ -4,6 +4,17 @@
 # Package Files #
 *.jar
 *.war
+
+# Include gwt library #
+!gwt-lib/gwt-codeserver.jar
+!gwt-lib/gwt-dev.jar
+!gwt-lib/gwt-servlet-deps.jar
+!gwt-lib/gwt-servlet.jar
+!gwt-lib/gwt-user.jar
+!gwt-lib/validation-api-1.0.0.GA-sources.jar
+!gwt-lib/validation-api-1.0.0.GA.jar
+
+# Include gxt library #
 !gxt-lib/gxt-4.0.0.jar                                                                         
 !gxt-lib/gxt-chart-4.0.0.jar
 
