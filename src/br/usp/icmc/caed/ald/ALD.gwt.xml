@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+	so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
+  "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<module rename-to='ald'>
+	<inherits name="com.google.gwt.logging.Logging" />
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<!-- Inherit the core libs -->
+	<!-- <inherits name='com.google.gwt.user.User'/> -->
+	<inherits name="com.google.gwt.http.HTTP" />
+	<!-- <inherits name="com.google.gwt.xml.XML" /> -->
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name='com.google.gwt.place.Place' />
+
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	<inherits name='com.google.gwt.precompress.Precompress' />
+
+	<set-configuration-property name="CssResource.style"
+		value="pretty" />
+	<set-property name="gwt.logging.logLevel" value="FINEST" />
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- <inherits name='com.google.gwt.user.theme.clean.Clean'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+	<inherits name='com.sencha.gxt.theme.blue.Blue' />
+	<!-- <inherits name="com.sencha.gxt.theme.edash.custom.EdashTheme"/> -->
+
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='br.usp.icmc.caed.ald.client.ALD' />
+
+	<replace-with class="br.usp.icmc.caed.ald.client.ioc.ClientFactory">
+		<when-type-is class="br.usp.icmc.caed.ald.client.ioc.IClientFactory" />
+	</replace-with>
+
+	<replace-with class="br.usp.icmc.caed.ald.client.data.DataStore">
+		<when-type-is class="br.usp.icmc.caed.ald.client.data.IDataStore" />
+	</replace-with>
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- collapse properties for fewer permutations -->
+	<collapse-property name="locale" values="en_*" />
+	<!-- <collapse-property name="gxt.device" values="desktop, phone, tablet" /> -->
+	<!-- <collapse-property name="gxt.user.agent" values="chrome*, air, safari*, gecko*, ie11" /> -->
+	<!-- <collapse-property name="user.agent" values="safari*, gecko*" /> -->
+	<collapse-property name="gxt.device" values="desktop" />
+	<collapse-property name="gxt.user.agent" values="chrome" />
+	<collapse-property name="user.agent" values="safari" />
+
+	<!-- allow Super Dev Mode -->
+	<add-linker name="xsiframe" />
+</module>
