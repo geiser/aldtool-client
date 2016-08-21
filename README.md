@@ -1,4 +1,4 @@
-# aldtool-client
+# Aldtool-client
 Automatic Learning Design Tool (Client) - Client part of an automatic learning design tool that is based on a client-server model.
 
 Current version only allows to gamify CL scenarios based on theories
