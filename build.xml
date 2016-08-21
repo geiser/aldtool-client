@@ -5,6 +5,7 @@
 
   <!-- Configure path to GWT SDK -->
   <property name="gwt.sdk" location="gwt-lib" />
+  <property name="gxt.lib" location="gxt-lib" />
 
   <path id="project.class.path">
     <pathelement location="war/WEB-INF/classes"/>
@@ -14,6 +15,8 @@
     <pathelement location="${gwt.sdk}/validation-api-1.0.0.GA-sources.jar"/>
     <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
     <!-- Add any additional non-server libs (such as JUnit) here -->
+    <pathelement location="${gxt.lib}/gxt-4.0.0.jar"/>
+    <pathelement location="${gxt.lib}/gxt-chart-4.0.0.jar"/>
   </path>
 
   <target name="libs" description="Copy libs to WEB-INF/lib">
