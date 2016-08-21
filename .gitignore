@@ -1,8 +1,11 @@
+.DS_Store
 *.class
 
 # Package Files #
 *.jar
 *.war
+!gxt-lib/gxt-4.0.0.jar                                                                         
+!gxt-lib/gxt-chart-4.0.0.jar
 
 # gwt caches and compiled units #
 war/gwt_bree/
