@@ -44,7 +44,7 @@ import br.usp.icmc.caed.ald.client.ioc.InjectConstants;
 import br.usp.icmc.caed.ald.client.view.IView.IHZInsDetailView;
 import br.usp.icmc.caed.ald.client.view.hz.dialog.HZSlotInsDialog;
 import br.usp.icmc.caed.ald.client.view.hz.dialog.IHZDialog.IHZSlotInsDialog;
-import br.usp.icmc.caed.ald.client.view.resource.Resource;
+import br.usp.icmc.caed.ald.client.view.hz.tmp.resource.Resource;
 
 public class HZInsDetailView implements IHZInsDetailView {
 

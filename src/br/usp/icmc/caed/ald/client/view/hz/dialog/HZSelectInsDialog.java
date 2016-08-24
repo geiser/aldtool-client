@@ -11,7 +11,7 @@ import br.usp.icmc.caed.ald.client.ioc.InjectConstants;
 import br.usp.icmc.caed.ald.client.view.IView.IJsonTreeView;
 import br.usp.icmc.caed.ald.client.view.hz.HZTreeView;
 import br.usp.icmc.caed.ald.client.view.hz.dialog.IHZDialog.IHZSelectInsDialog;
-import br.usp.icmc.caed.ald.client.view.resource.Resource;
+import br.usp.icmc.caed.ald.client.view.hz.tmp.resource.Resource;
 
 import com.google.gwt.core.client.Callback;
 import com.google.gwt.core.client.GWT;

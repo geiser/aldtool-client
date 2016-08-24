@@ -14,6 +14,7 @@
 	<inherits name='com.google.gwt.activity.Activity' />
 	<inherits name='com.google.gwt.place.Place' />
 
+  <!-- Other module inherits -->
 	<inherits name='com.sencha.gxt.ui.GXT' />
 	<inherits name='com.sencha.gxt.chart.Chart' />
 	<inherits name='com.google.gwt.precompress.Precompress' />
@@ -31,10 +32,7 @@
 	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
 	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
 	<inherits name='com.sencha.gxt.theme.blue.Blue' />
-	<!-- <inherits name="com.sencha.gxt.theme.edash.custom.EdashTheme"/> -->
-
-	<!-- Other module inherits -->
-
+	
 	<!-- Specify the app entry point class. -->
 	<entry-point class='br.usp.icmc.caed.ald.client.ALD' />
 
@@ -45,6 +43,23 @@
 	<replace-with class="br.usp.icmc.caed.ald.client.data.DataStore">
 		<when-type-is class="br.usp.icmc.caed.ald.client.data.IDataStore" />
 	</replace-with>
+	
+	<replace-with
+    class="br.usp.icmc.caed.ald.client.data.tmp.TestDataStore">
+    <when-type-is class="br.usp.icmc.caed.ald.client.data.tmp.DataStore" />
+  </replace-with>
+  
+  <!-- Config Drawing path -->
+  <replace-with class='com.sencha.gxt.chart.client.draw.engine.SVG'>
+    <when-type-is class='com.sencha.gxt.chart.client.draw.Surface' />
+  </replace-with>
+  <replace-with class='com.sencha.gxt.chart.client.draw.engine.VML'>
+    <when-type-is class='com.sencha.gxt.chart.client.draw.Surface' />
+    <any>
+      <when-property-is name='user.agent' value='ie6' />
+      <when-property-is name='user.agent' value='ie8' />
+    </any>
+  </replace-with>
 
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />

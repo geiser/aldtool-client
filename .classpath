@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-        <classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="gwt-lib/gwt-user.jar"/>
 	<classpathentry kind="lib" path="gwt-lib/gwt-dev.jar"/>
 	<classpathentry kind="lib" path="gwt-lib/validation-api-1.0.0.GA.jar"/>
@@ -9,7 +9,5 @@
 	<classpathentry kind="lib" path="gxt-lib/gxt-chart-4.0.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/json-20090211.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

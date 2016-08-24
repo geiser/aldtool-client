@@ -1,4 +1,4 @@
-package br.usp.icmc.caed.ald.client.view.resource;
+package br.usp.icmc.caed.ald.client.view.hz.tmp.resource;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;

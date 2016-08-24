@@ -18,6 +18,7 @@ import br.usp.icmc.caed.ald.client.model.Navigation;
 import br.usp.icmc.caed.ald.client.place.HZInsDetailPlace;
 import br.usp.icmc.caed.ald.client.place.HZInsListPlace;
 import br.usp.icmc.caed.ald.client.place.HomePlace;
+import br.usp.icmc.caed.ald.client.place.tmp.TreeScenarioPlace;
 import br.usp.icmc.caed.ald.client.view.IView.IHZInsDetailView;
 import br.usp.icmc.caed.ald.client.view.IView.IJsonTreeView;
 import br.usp.icmc.caed.ald.client.view.IView.INavigationView;
@@ -26,7 +27,7 @@ import br.usp.icmc.caed.ald.client.view.MainNavigation;
 import br.usp.icmc.caed.ald.client.view.ShellView;
 import br.usp.icmc.caed.ald.client.view.hz.HZInsDetailView;
 import br.usp.icmc.caed.ald.client.view.hz.HZTreeView;
-import br.usp.icmc.caed.ald.client.view.resource.Resource;
+import br.usp.icmc.caed.ald.client.view.hz.tmp.resource.Resource;
 
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.Callback;
@@ -141,7 +142,8 @@ public class ClientFactory implements IClientFactory {
 					new Navigation("Domain", null, Resource.ICONS.domain()),
 					new Navigation("Learner", null, Resource.ICONS.learner()),
 					new Navigation("Expert", null, Resource.ICONS.expert()),
-					new Navigation("Setting", null, Resource.ICONS.setting())
+					new Navigation("Setting", null, Resource.ICONS.setting()),
+					new Navigation("Tmp-Tree", new TreeScenarioPlace(), Resource.ICONS.music())
 					));
 
 			final ITreeDAO<String, JSONObject> wcTreeDAO = ds.getHZOntoTreeDAO("whole-concept");

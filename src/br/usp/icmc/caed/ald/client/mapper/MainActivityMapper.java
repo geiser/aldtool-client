@@ -1,15 +1,14 @@
 package br.usp.icmc.caed.ald.client.mapper;
 
-import br.usp.icmc.caed.ald.client.activity.BaseActivity;
-import br.usp.icmc.caed.ald.client.activity.HZInsDetailActivity;
-import br.usp.icmc.caed.ald.client.activity.HZInsListActivity;
-import br.usp.icmc.caed.ald.client.ioc.IClientFactory.Provider;
-import br.usp.icmc.caed.ald.client.place.HZInsDetailPlace;
-import br.usp.icmc.caed.ald.client.place.HZPlace;
-
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
+
+import br.usp.icmc.caed.ald.client.activity.HZInsDetailActivity;
+import br.usp.icmc.caed.ald.client.activity.tmp.TreeScenarioActivity;
+import br.usp.icmc.caed.ald.client.ioc.IClientFactory.Provider;
+import br.usp.icmc.caed.ald.client.place.HZInsDetailPlace;
+import br.usp.icmc.caed.ald.client.place.tmp.TreeScenarioPlace;
 
 
 public class MainActivityMapper implements ActivityMapper {
@@ -50,7 +49,12 @@ public class MainActivityMapper implements ActivityMapper {
   public Activity getActivity(Place place) {
     if (place instanceof HZInsDetailPlace) {
       return this.hzDepInsDetailActivityProvider.get((HZInsDetailPlace) place);
-    }
+    } else if (place instanceof TreeScenarioPlace) {
+    	// TODO this is temporal for treeScenario Activity
+      return new TreeScenarioActivity();
+  }
+    
+    
     return null;
   }
 
